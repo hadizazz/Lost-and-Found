@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+
 export default class Login extends Component {
   render() {
     return (
@@ -31,14 +32,17 @@ export default class Login extends Component {
             <div className="login">
               <input type="submit" value="Login"></input>
             </div>
-            <a href="#" className="forgotPassword">Forgot Password?</a>
+            <a href="/forget" className="forgotPassword">
+              Forgot Password?
+            </a>
           </div>
-          <div className="loginRow2">OR
-          <div className="facebook">
-              <input type="submit" value="Login with Facebook"></input>
+          <div className="loginRow2">
+            OR
+            <div className="facebook">
+              <a href="/facebook" class="facebookText">Login with Facebook</a> 
             </div>
             <div className="twitter">
-              <input type="submit" value="Login with Twitter"></input>
+              <a href="/twitter" class="twitterText">Login with Twitter</a> 
             </div>
           </div>
         </form>
