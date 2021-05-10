@@ -4,9 +4,11 @@ import {withStyles} from '@material-ui/core'
 
 const StyledButton = withStyles({
     root: {
-        display:"flex",
+        fontStyle:'bold',
+        display:"inline-block",
         alignItems: "center",
         height:"43px",
+        justifyContent:'center',
         // fontSize: "15px",
         padding: "0 25px",
         boxSizing: "border-box",
@@ -15,7 +17,7 @@ const StyledButton = withStyles({
         transform: "none",
         // boxShadow: "3px 3px 0 0 #c7d8ed",
         transition: "background .3s,border-color .3s, color .3s", "&:hover": {
-            backgroundColor: '#ffffff',
+            backgroundColor: 'transparent',
         },
     },
     label : {

@@ -5,20 +5,21 @@ import {makeStyles} from '@material-ui/core/styles'
 import {Typography} from '@material-ui/core'
 import CustomBtn from './components/CustomBtn'
 import DaftarBrg from './components/DaftarBrg'
+import LandingPage from './pages/LandingPage'
+import Footer from './components/Footer'
+import styled from "styled-components";
+import TotalBrg from './components/TotalBrg'
 
-// import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
-// import LocalMallOutlinedIcon from '@material-ui/icons/LocalMallOutlined';
-// import AccountBalanceWalletIcon from '@material-ui/icons/AccountBalanceWallet';
-// import ImportExportIcon from '@material-ui/icons/ImportExport';
-// import ComputerIcon from '@material-ui/icons/Computer';
-// import HttpIcon from '@material-ui/icons/Http';
 
 function App() {
   
   return (
     <div className="App">
       <Navbar/>
-      <DaftarBrg/>
+      <LandingPage/>
+      {/* <DaftarBrg/> */}
+      <TotalBrg/>
+      <Footer/>
     </div>
   );
 }

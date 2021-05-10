@@ -8,9 +8,14 @@ import {makeStyles} from '@material-ui/core/styles';
 
 const styles = makeStyles({
     bar:{
+        position:'fixed',
+        top:'0',
+        width: '100%',
+        fontWeight: '600',
+        overflow:'hidden',
         paddingTop: "1rem",
         height:"30px",
-        backgroundColor: '#ffffff',
+        backgroundColor: 'transparent',
         ['@media (max-width:780px)']: {
             flexDirection: "column",
             display: "inline-block",
