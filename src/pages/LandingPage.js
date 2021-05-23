@@ -6,7 +6,7 @@ export default class BodyContainer extends Component {
     return (
       //Hero
       <div>
-        <div className="body">
+          <div className="body">
           <div className="hero">
             <div className="boxHeading">
               <p className="heading">Dari Menemukan, Buat Perubahan</p>
