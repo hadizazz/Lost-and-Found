@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 import {makeStyles} from '@material-ui/core/styles'
 
 const styles = makeStyles({
@@ -24,15 +23,14 @@ const styles = makeStyles({
         gridGap:'20px',
     },
     Row:{
-        display:'grid',
+        display:'flex',
         gridTemplateColumns:'repeat(auto-fill, minmax(230, 1fr))',
-        gridGap:'20px',
+        gridGap:'100px',
         gap:'20px',
     },
     Row2:{
-        display:'gap',
+        display:'flex',
         gridGap:'20px',
-        gap:'20px',
         justifyContent:'center',
     },
     Row3:{
@@ -80,22 +78,22 @@ export default function footer() {
                 <div className={classes.Row}>
                     <div className={classes.Column}>
                         <div className={classes.Title}>TENTANG LOST & FOUND</div>
-                        <div href="#" className={classes.Link}>Syarat dan Ketentuan</div>
-                        <div href="#" className={classes.Link}>Kebijakan Privasi</div>
-                        <div href="#" className={classes.Link}>FAQ</div>
+                        <a href="#" className={classes.Link}>Syarat dan Ketentuan</a>
+                        <a href="#" className={classes.Link}>Kebijakan Privasi</a>
+                        <a href="#" className={classes.Link}>FAQ</a>
                     </div>
                     <div className={classes.Column}>
                         <div className={classes.Title}> IKUTI UPDATE KAMI</div>
                         <div className={classes.Row3}>
-                            <div href="#" className={classes.Image}>
+                            <a href="#" className={classes.Image}>
                                 <img alt="Twitter" src="https://i.ibb.co/3sLSSz0/twitter-1.png"></img>
-                            </div>
-                            <div href="#" className={classes.Image}>
+                            </a>
+                            <a href="#" className={classes.Image}>
                                 <img alt="Facebook" src="https://i.ibb.co/PF1798t/facebook-1.png"></img>
-                            </div>
-                            <div href="#" className={classes.Image}>
+                            </a>
+                            <a href="#" className={classes.Image}>
                                 <img alt="Instagram" src="https://i.ibb.co/25mw7Bs/INSTAGRAM.png"></img>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>

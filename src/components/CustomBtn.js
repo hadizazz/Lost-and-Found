@@ -4,7 +4,7 @@ import {withStyles} from '@material-ui/core'
 
 const StyledButton = withStyles({
     root: {
-        fontStyle:'bold',
+        // fontStyle:'bold',
         display:"inline-block",
         alignItems: "center",
         height:"43px",
@@ -12,13 +12,17 @@ const StyledButton = withStyles({
         // fontSize: "15px",
         padding: "0 25px",
         boxSizing: "border-box",
-        background: "#1a73e8",
-        color:"black",
+        border:'1px solid ##e0557c',
+        background: "#e0557c",
+        color:"white",
         transform: "none",
         // boxShadow: "3px 3px 0 0 #c7d8ed",
         transition: "background .3s,border-color .3s, color .3s", "&:hover": {
+            border: '1px solid #44c5e1',
             backgroundColor: 'transparent',
+            color:'Black'
         },
+        textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
     },
     label : {
         textTransform: "capitalize",

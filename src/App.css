@@ -37,9 +37,11 @@
   }
 }
 
-/* a {
-  display: ;
+a {
+  text-decoration: none ;
+  color: white;
 }
+
 .a Button {
   background-color: #4CAF50;
   border: none;
@@ -51,17 +53,5 @@
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer; 
+}
 
-  /* align-items: center;
-  display:flex;
-  height:43px;
-  padding:0 25px;
-  box-sizing:border-box;
-  border: black;
-  background-color:red;
-  color:red;
-  transform:none;
-  /* boxShadow: 3px 3px 0 0 #c7d8ed ; */
-    /* background-color: #ffffff;
-    transition:cubic-bezier(0.075, 0.82, 0.165, 1); */ 
-/* } */

@@ -2,7 +2,6 @@ import Grid from './Grid';
 import React from 'react'
 import {makeStyles} from '@material-ui/core/styles'
 import {Typography} from '@material-ui/core'
-import CustomBtn from './CustomBtn'
 import '../index.css'
 
 import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
@@ -41,12 +40,12 @@ export default function DaftarBrg() {
     const classes = styles();
 
     return (
-    <div>
+    <div className="daftarBrg">
         <div className={classes.wrapper}>
             <Typography variant="h2" className={classes.bigSpace} color="black">Daftar Barang</Typography>
             
               <div className="button1">
-                  <a href="#lihat semua" className="textButtonHero"> Lihat Semua</a>
+                  <a href="/Home" className="textButtonHero"> Lihat Semua</a>
               </div>
   
             {/* <CustomBtn textAlign="center" text="Lihat Semua" color="Black"/> */}
@@ -56,15 +55,15 @@ export default function DaftarBrg() {
             <br/>
         </div>
         <br/>
-        <div className={'${classes.grid} ${classes.bigSpace}'}>
-            <Grid icon={<PhoneAndroidIcon style={{fill:"#4360A6",height:"100", width:"100",}}/>} title="Handphone" btnTitle="Show me More"/>
-            <Grid icon={<LocalMallOutlinedIcon style={{fill:"#449A76",height:"100", width:"100",}}/>} title="Tas" btnTitle="Show me More" />
-            <Grid icon={<AccountBalanceWalletIcon style={{fill:"#D05B2D",height:"100", width:"100",}}/>} title="Dompet" btnTitle="Show me More" />
+        <div className="{}">
+            <Grid icon={<PhoneAndroidIcon style={{fill:"black",height:"100", width:"100",}}/>} title="Handphone" btnTitle="Show me More"/>
+            <Grid icon={<LocalMallOutlinedIcon style={{fill:"black",height:"100", width:"100",}}/>} title="Tas" btnTitle="Show me More" />
+            <Grid icon={<AccountBalanceWalletIcon style={{fill:"black",height:"100", width:"100",}}/>} title="Dompet" btnTitle="Show me More" />
         </div>
 
-        <div className={'${classes.grid} ${classes.littleSpace}'}>
-            <Grid icon={<MenuBookIcon style={{fill:"#51AE3E",height:"100", width:"100"}}/>} title="Buku/Dokumen" btnTitle="Show me More" />
-            <Grid icon={<WatchIcon style={{fill:"#0C8CC1",height:"100", width:"100",}}/>} title="Jam Tangan" btnTitle="Show me More" />
+        <div className="{}">
+            <Grid icon={<MenuBookIcon style={{fill:"black ",height:"100", width:"100"}}/>} title="Buku/Dokumen" btnTitle="Show me More" />
+            <Grid icon={<WatchIcon style={{fill:"black",height:"100", width:"100",}}/>} title="Jam Tangan" btnTitle="Show me More" />
             <Grid icon={<MoreHorizIcon style={{fill:"black",height:"100", width:"100",}}/>} title="Lainnya" btnTitle="Show me More" />
         </div>
     </div>
