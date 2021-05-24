@@ -41,6 +41,7 @@ export default class Homepage extends Component {
               ></img>
               <p className="judulBarang">{items.judul}</p>
               <p className="deskripsi">{items.keterangan}</p>
+              <p>{items.lokasi}</p>
             </div>
           </div>
           <Footer />

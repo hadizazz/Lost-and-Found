@@ -51,7 +51,7 @@ export default function LandingPage() {
           </div>
         </div>
         <div className="Tips">
-          <h2>TIPS MENJAGA BARANG</h2>
+          <h2 style={{color:'black'}}>TIPS MENJAGA BARANG</h2>
           <div className="squareBox">
             <div className="square">Siapkan Tempat Khusus</div>
             <div className="square">Kelompokkan Barang</div>

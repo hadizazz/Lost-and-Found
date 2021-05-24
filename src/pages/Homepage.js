@@ -48,7 +48,7 @@ export default class Homepage extends Component {
                         src={url + item.foto}
                       ></img>
                       <p className="judulBarang">{item.judul}</p>
-                      <p className="deskripsi">{item.keterangan}</p>
+                      {/* <p className="deskripsi">{item.keterangan}</p> */}
                       <a href={"/home/"+item.id}
                         className="detailButton"
                       >

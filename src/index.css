@@ -225,7 +225,7 @@ input[type="submit"]:hover {
   justify-content: center;
   margin: auto;
   padding: 30px 0 30px 0;
-  background: #ffffff;
+  background: url("https://i.ibb.co/rv3ngvD/cari-barang-grosir-impor-2.png");
   /* height: 525px; */
   box-sizing: border-box;
   font-weight: 400;
@@ -247,6 +247,7 @@ h2 {
   margin: 30px;
   border-radius: 30px;
   box-shadow: 1px 1px;
+  background-color: #f5f5f5;
 }
 
 .square:hover {
@@ -316,7 +317,7 @@ h2 {
   border: 1px;
   color: white;
   font-size: 30px;
-  line-height: 54px;  
+  line-height: 54px;
   width: 326px;
   opacity: 0.9g;
 }
@@ -368,3 +369,17 @@ h2 {
   padding: 20px;
 }
 
+.totalBrg {
+  display: flex;
+}
+
+.barangIcon {
+  height: "100px";
+  width: "100px";
+  color: "black";
+  display: "flex";
+  alignitems: "center";
+  textalign: "center";
+  justifycontent: "center";
+  font-size: "80px";
+}
