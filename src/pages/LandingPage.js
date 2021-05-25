@@ -1,9 +1,10 @@
 import React from "react";
-import DaftarBrg from "../components/DaftarBrg";
+import DaftarBrg from "../components/landingPage/DaftarBrg";
 import "../index.css";
-import Navbar from "../components/Navbar";
-import TotalBrg from "../components/TotalBrg";
-import Footer from "../components/Footer";
+import Navbar from "../components/navbar/Navbar";
+import TotalBrg from "../components/landingPage/TotalBrg";
+import Footer from "../components/footer/Footer";
+
 
 export default function LandingPage() {
   return (
@@ -24,6 +25,7 @@ export default function LandingPage() {
               Menemukan Barang{" "}
             </a>
           </div>
+          
           <div className="button">
             <a href="/home" className="textButtonHero">
               {" "}

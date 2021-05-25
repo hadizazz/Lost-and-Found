@@ -1,8 +1,8 @@
-import Grid from './Grid';
+import Grid from '../Grid';
 import React from 'react'
 import {makeStyles} from '@material-ui/core/styles'
 import {Typography} from '@material-ui/core'
-import '../index.css'
+// import '.../'
 
 import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
 import LocalMallOutlinedIcon from '@material-ui/icons/LocalMallOutlined';

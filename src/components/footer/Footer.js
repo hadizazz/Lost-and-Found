@@ -70,7 +70,7 @@ const styles = makeStyles({
     }
 })
 
-export default function footer() {
+export default function Footer() {
     const classes = styles();
     return (
         <div className={classes.Container}>

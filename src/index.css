@@ -132,10 +132,9 @@ p {
 }
 
 .loginContainer {
-  max-width: 681px;
   min-height: 521px;
   background-color: #ffffff;
-  border-radius: 26px;
+  /* border-radius: 26px; */
   position: relative;
 }
 
@@ -160,7 +159,7 @@ input[type="password"],
 input[type="submit"] {
   padding: 11px;
   padding-left: 20px;
-  width: 603px;
+  width: 400px;
   border: 1px solid #858080;
   box-sizing: border-box;
   border-radius: 15px;
@@ -173,10 +172,11 @@ input[type="submit"] {
 .checkbox {
   display: flex;
   justify-content: flex-start;
-  padding-left: 40px;
+  padding-left: 60px;
 }
 
 .rememberMe {
+  padding-left: 5px;
   margin-block-end: 0;
   margin-block-start: 0;
   font-weight: 400;
@@ -354,8 +354,8 @@ h2 {
 }
 
 .lineRegister {
-  border: 1px solid #000000;
-  width: 663px;
+  border: 1px solid #e0557c;
+  /* width: 663px; */
 }
 
 .squareBox {
@@ -378,8 +378,96 @@ h2 {
   width: "100px";
   color: "black";
   display: "flex";
-  alignitems: "center";
-  textalign: "center";
-  justifycontent: "center";
   font-size: "80px";
+}
+
+.modal-cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  transform: translateZ(0);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-area {
+  position: fixed;
+  top: 25px;
+  left: 500px;
+  width: 35%;
+  height: 93%;
+  padding: 2.5em 1.5em 1.5em 1.5em;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px 3px rgb(0 0 0 / 10%);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+._modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5em;
+  line-height: 1;
+  background: #f6f6f7;
+  border: 0;
+  box-shadow: 0;
+  cursor: pointer;
+}
+
+._hide-visual {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+._modal-close-icon {
+  width: 25px;
+  height: 25px;
+  fill: transparent;
+  stroke: black;
+  stroke-linecap: round;
+  stroke-width: 2;
+}
+
+.modal-body {
+  padding-top: 0.25em;
+}
+
+.scroll-lock {
+  overflow: hidden;
+  margin-right: 17px;
+}
+
+.signUp{
+  color: #44c5e1;
+}
+
+.signUp:hover{
+  color: #e0557c;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.registerDisplay{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.registerImg{
+  /* width: 50%;
+  height: auto; */
+}
+
+.registerBox{
+  padding-top: 50px;
+  padding-left: 100px;
 }

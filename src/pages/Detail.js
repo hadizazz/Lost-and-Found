@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/navbar/Navbar";
 import axios from "axios";
-import Footer from "../components/Footer";
+import Footer from "../components/footer/Footer";
 
 export default class Homepage extends Component {
   constructor(props) {

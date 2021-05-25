@@ -1,8 +1,9 @@
 import React from "react";
-import CustomBtn from "./CustomBtn";
-import logo from "../logo.svg";
+// import CustomBtn from "../CustomBtn";
+import logo from "../.././logo.svg";
 import { Toolbar, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import Container from "../landingPage/Container";
 
 const styles = makeStyles({
   bar: {
@@ -31,7 +32,7 @@ const styles = makeStyles({
     },
   },
   menuItem: {
-    paddingRight: "3px",
+    paddingRight: "4px",
     fontSize: "15px",
     // width: "10px",
     cursor: "pointer",
@@ -53,6 +54,13 @@ const styles = makeStyles({
   },
 });
 
+const triggerText = "Masuk";
+  const onSubmit = (event) => {
+    event.preventDefault(event);
+    console.log(event.target.name.value);
+    console.log(event.target.email.value);
+  };
+
 export default function Navbar() {
   const classes = styles();
   return (
@@ -72,13 +80,13 @@ export default function Navbar() {
             CONTACT US{" "}
           </a>
         </Typography>
-        <Typography className={classes.menuItem}>
+        {/* <Typography className={classes.menuItem}>
           <a style={{ color: "black" }} href="#">
             {" "}
             MASUK{" "}
           </a>
-        </Typography>
-        <CustomBtn text="DAFTAR" />
+        </Typography> */}
+        <Container triggerText={triggerText} onSubmit={onSubmit} text="DAFTAR" />
       </Toolbar>
     </div>
   );

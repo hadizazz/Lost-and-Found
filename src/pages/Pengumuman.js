@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-export class Pengumuman extends Component {
+export default class Pengumuman extends Component {
   constructor(props) {
     super(props);
 
