@@ -1,5 +1,6 @@
 import React from "react";
 // import CustomBtn from "../CustomBtn";
+import {Link} from "react-router-dom"
 import logo from "../.././logo.svg";
 import { Toolbar, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
@@ -12,49 +13,46 @@ const styles = makeStyles({
     position: "fixed",
     top: "0",
     width: "100%",
-    fontWeight: "600",
+    // fontWeight: "100",
     overflow: "hidden",
-    // paddingTop: "1rem",
     height: "30px",
     backgroundColor: "transparent",
     ["@media (max-width:780px)"]: {
       flexDirection: "column",
       display: "inline-block",
-      // position: "static",
+      position:'fixed',
+      width: '50%',
     },
-    textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
   },
   logo: {
     width: "90%",
-    // backgroundColor: 'black',
     ["@media (max-width:780px)"]: {
       display: "none",
     },
   },
   menuItem: {
-    paddingRight: "4px",
+    display:'inline-block', 
+    paddingRight: "3px",
     fontSize: "15px",
-    // width: "10px",
     cursor: "pointer",
-    // flexGrow: 1,
-    fontFamily: "Poppins",
+    color:'black',
+    // fontFamily: "Poppins",
     "&hover": {
       color: "#4f25c8",
     },
     ["@media (max-width:780px)"]: {
       paddingBottom: "1rem",
+      flexDiraction:'column',
+      display:'inline-block',
     },
   },
   Typography:{
-    width:'700px'
+    width:'500px'
   },
-  CustomBtn: {
-    backgroundColor: "#1a73e8",
-    color: "black",
-  },
+
 });
 
-const triggerText = "Masuk";
+const triggerText = "MASUK";
   const onSubmit = (event) => {
     event.preventDefault(event);
     console.log(event.target.name.value);
@@ -67,25 +65,14 @@ export default function Navbar() {
     <div>
       <Toolbar id="navbar" position="sticky" className={classes.bar}>
         <a href="/"><img src={logo} className={classes.logo}/></a>
-        <Typography className={classes.menuItem}>
-          <a style={{ color: "black" }} href="/home">
-            {" "}
-            EXPLORE{" "}
-          </a>
-        </Typography>
-        <Typography className={classes.Typography}> </Typography>
-        <Typography className={classes.menuItem}>
-          <a style={{ color: "black" }} href="#">
-            {" "}
-            CONTACT US{" "}
-          </a>
-        </Typography>
-        {/* <Typography className={classes.menuItem}>
-          <a style={{ color: "black" }} href="#">
-            {" "}
-            MASUK{" "}
-          </a>
-        </Typography> */}
+        <Link className={classes.menuItem} to="/" style={{textDecoration:'none',paddingTop:'1rem',}}>
+            <h5>EXPLORE</h5>
+        </Link>
+        <Typography className={classes.Typography}/>
+        <Link className={classes.menuItem} to="/contact" style={{textDecoration:'none', paddingTop: '1rem',}}>
+          <h5>CONTACT</h5>
+        </Link>
+      
         <Container triggerText={triggerText} onSubmit={onSubmit} text="DAFTAR" />
       </Toolbar>
     </div>

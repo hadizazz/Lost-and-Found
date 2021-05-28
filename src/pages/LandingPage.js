@@ -9,7 +9,7 @@ import Footer from "../components/footer/Footer";
 export default function LandingPage() {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="body">
         <div className="hero">
           <div className="boxHeading">

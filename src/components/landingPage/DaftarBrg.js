@@ -1,8 +1,7 @@
-import Grid from '../Grid';
 import React from 'react'
+import Grid from '../Grid';
 import {makeStyles} from '@material-ui/core/styles'
 import {Typography} from '@material-ui/core'
-// import '.../'
 
 import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
 import LocalMallOutlinedIcon from '@material-ui/icons/LocalMallOutlined';
@@ -56,15 +55,15 @@ export default function DaftarBrg() {
         </div>
         <br/>
         <div className="{}">
-            <Grid icon={<PhoneAndroidIcon style={{fill:"black",height:"100", width:"100",}}/>} title="Handphone" btnTitle="Show me More"/>
-            <Grid icon={<LocalMallOutlinedIcon style={{fill:"black",height:"100", width:"100",}}/>} title="Tas" btnTitle="Show me More" />
-            <Grid icon={<AccountBalanceWalletIcon style={{fill:"black",height:"100", width:"100",}}/>} title="Dompet" btnTitle="Show me More" />
+            <Grid icon={<PhoneAndroidIcon style={{fill:"black",height:"100", width:"100",}}/>} title="Handphone"/>
+            <Grid icon={<LocalMallOutlinedIcon style={{fill:"black",height:"100", width:"100",}}/>} title="Tas" />
+            <Grid icon={<AccountBalanceWalletIcon style={{fill:"black",height:"100", width:"100",}}/>} title="Dompet" />
         </div>
 
         <div className="{}">
-            <Grid icon={<MenuBookIcon style={{fill:"black ",height:"100", width:"100"}}/>} title="Buku/Dokumen" btnTitle="Show me More" />
-            <Grid icon={<WatchIcon style={{fill:"black",height:"100", width:"100",}}/>} title="Jam Tangan" btnTitle="Show me More" />
-            <Grid icon={<MoreHorizIcon style={{fill:"black",height:"100", width:"100",}}/>} title="Lainnya" btnTitle="Show me More" />
+            <Grid icon={<MenuBookIcon style={{fill:"black ",height:"100", width:"100"}}/>} title="Buku/Dokumen" />
+            <Grid icon={<WatchIcon style={{fill:"black",height:"100", width:"100",}}/>} title="Jam Tangan"/>
+            <Grid icon={<MoreHorizIcon style={{fill:"black",height:"100", width:"100",}}/>} title="Lainnya" />
         </div>
     </div>
     )
