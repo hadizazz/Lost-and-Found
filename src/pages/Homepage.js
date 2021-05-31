@@ -33,7 +33,7 @@ class Homepage extends Component {
     return (
       <div>
         <div className="home">
-          <Navbar />
+          {/* <Navbar /> */}
           <div className="pengumuman">
             <a href="/home/create" className="buttonPengumuman">
               Buat Pengumuman
