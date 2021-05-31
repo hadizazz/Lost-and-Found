@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import axios from "axios";
+import api from "../services/apiClient";
 
 export default class Pengumuman extends Component {
   constructor(props) {
@@ -54,10 +54,14 @@ export default class Pengumuman extends Component {
       data.set("lokasi", this.state.lokasi);
       data.set("kontak", this.state.kontak);
 
-      axios
-        .post("http://127.0.0.1:8000/api/items", data)
+      api().get("/sanctum/csrf-cookie");
+      api()
+        .post("/api/items", data)
         .then((response) => console.log(response))
-        .catch((error) => console.log(error));
+        .catch((error) => console.log(error))
+        .then(() => {
+          return (window.location.href = "/home");
+        });
     }
   };
 
@@ -81,7 +85,7 @@ export default class Pengumuman extends Component {
     const {
       judul,
       // setJudul,
-      foto,
+      // foto,
       // setFoto,
       keterangan,
       // setKeterangan,
@@ -92,63 +96,64 @@ export default class Pengumuman extends Component {
     } = this.state;
     return (
       <div>
-        <div className="registerContainer">
-          <form
-            // method="POST"
-            // action="/Home"
-            onSubmit={this.submitHandler}
-            // enctype="multipart/form-data"
-          >
-            <div className="registerRow">
-              <p className="titleRegister">Pengumuman</p>
-              <div className="lineRegister"></div>
-              <input
-                type="text"
-                name="judul"
-                placeholder="Nama Barang Hilang"
-                value={judul}
-                onChange={this.changeHandler}
-                required
-              ></input>
-              {/* <FileUploaded
+        <div className="">
+          <div className="registerContainer">
+            <form
+              className=""
+              // method="POST"
+              onSubmit="/home"
+              // enctype="multipart/form-data"
+            >
+              <div className="registerRow">
+                <p className="titleRegister">Pengumuman</p>
+                <div className="lineRegister"></div>
+                <input
+                  type="text"
+                  name="judul"
+                  placeholder="Nama Barang Hilang"
+                  value={judul}
+                  onChange={this.changeHandler}
+                  required
+                ></input>
+                {/* <FileUploaded
                 onFileSelectSuccess={(file) => setFoto(file)}
                 onFileSelectError={({ error }) => alert(error)}
               /> */}
-              <input
-                type="file"
-                name="foto"
-                id="foto"
-                placeholder="Choose File"
-                // value={foto}
-                onChange={this.handleFileChange}
-              ></input>
-              <input
-                type="text"
-                name="keterangan"
-                placeholder="Keterangan"
-                value={keterangan}
-                onChange={this.changeHandler}
-                required
-              ></input>
-              <input
-                type="text"
-                name="lokasi"
-                placeholder="Lokasi ditemukan"
-                value={lokasi}
-                onChange={this.changeHandler}
-                required
-              ></input>
-              <input
-                type="text"
-                name="kontak"
-                placeholder="No HP"
-                value={kontak}
-                onChange={this.changeHandler}
-                required
-              ></input>
-              <button type="submit" onClick={this.upload}>Submit</button>
-            </div>
-          </form>
+                <input
+                  type="file"
+                  name="foto"
+                  id="foto"
+                  placeholder="Choose File"
+                  onChange={this.handleFileChange}
+                ></input>
+                <input
+                  type="text"
+                  name="keterangan"
+                  placeholder="Keterangan"
+                  value={keterangan}
+                  onChange={this.changeHandler}
+                  required
+                ></input>
+                <input
+                  type="text"
+                  name="lokasi"
+                  placeholder="Lokasi ditemukan"
+                  value={lokasi}
+                  onChange={this.changeHandler}
+                  required
+                ></input>
+                <input
+                  type="text"
+                  name="kontak"
+                  placeholder="No HP"
+                  value={kontak}
+                  onChange={this.changeHandler}
+                  required
+                ></input>
+                <input type="submit" onClick={this.upload}></input>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     );

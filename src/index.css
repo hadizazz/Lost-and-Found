@@ -447,27 +447,124 @@ h2 {
   margin-right: 17px;
 }
 
-.signUp{
+.signUp {
   color: #44c5e1;
 }
 
-.signUp:hover{
+.signUp:hover {
   color: #e0557c;
   text-decoration: none;
   cursor: pointer;
 }
 
-.registerDisplay{
+.registerDisplay {
   display: flex;
   justify-content: space-evenly;
 }
 
-.registerImg{
-  /* width: 50%;
-  height: auto; */
-}
+/* .registerImg {
+  width: 50%;
+  height: auto;
+} */
 
-.registerBox{
+.registerBox {
   padding-top: 50px;
   padding-left: 100px;
 }
+
+.wrapperDet {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 100px;
+
+  /* align-items: center; */
+  /* justify-content: space-around; */
+  /* position: fixed; */
+  /* float: left; */
+  /* top: 150px; */
+}
+
+.rowDet {
+  display: grid;
+  align-items: center;
+  /* // height:'auto', */
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: space-around; */
+  /* flex-wrap: wrap; */
+  /* box-sizing: border-box; */
+}
+
+.imgDet {
+  /* padding-top: 50px; */
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+}
+
+.descBoxDet{
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  padding: 30px;
+  /* left: -100px; */
+  top: 25px;
+  /* height: 50vh; */
+  width: 50vw;
+}
+
+.titleDet{
+font-size: 25px;
+color: #e0557c;
+justify-content: center;
+line-height: normal
+}
+
+.subtitleDet{
+font-size: 20px;
+color: #e0557c;
+text-align: left;
+/* line-height: normal */
+}
+
+.descBrgDet{
+  display: list-item;
+  justify-content: start;
+  list-style: none;
+  font-weight: 50;
+  font-size: 15px;
+  position: relative;
+  text-align: justify;
+  line-height: 2.5;
+  list-style-type: '';
+  color: black;
+}
+
+.BtnDet{
+  margin: 0 20px 0 20px;
+  text-align: center!important;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 11px 70px;
+  color: black;
+  background:#e0557c;
+  font-size: 15px;
+  padding: 7px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  transition: background .3s , border-color .3s, color.3s;
+}
+
+.BtnDet:hover{
+  border: 1px solid #e0557c;
+  background-color: transparent;
+  color: #e0557c;
+}
+
+/* .registerBox{
+  box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+} */

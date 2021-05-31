@@ -2,8 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Form from "../form/Form";
 import FocusTrap from "focus-trap-react";
+import Profile from '../../pages/Profile'
 
-export const Modal = ({
+export const Modal2 = ({
   onClickOutside,
   onKeyDown,
   modalRef,
@@ -40,7 +41,7 @@ export const Modal = ({
               </svg>
             </button>
             <div className="modal-body">
-              <Form {...props} onSubmit={onSubmit} />
+              <Profile {...props} onSubmit={onSubmit} />
             </div>
           </div>
         </aside>
@@ -49,4 +50,4 @@ export const Modal = ({
     document.body
   );
 };
-export default Modal;
+export default Modal2;

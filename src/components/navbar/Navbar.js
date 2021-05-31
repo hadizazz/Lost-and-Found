@@ -4,11 +4,13 @@ import logo from "../.././logo.svg";
 import { Toolbar, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "../landingPage/Container";
+import { Link } from "react-router-dom";
+import api from "../../services/apiClient";
 
 const styles = makeStyles({
   bar: {
-    display:'flex',
-    justifyContent:'space-between',
+    display: "flex",
+    justifyContent: "space-between",
     position: "fixed",
     top: "0",
     width: "100%",
@@ -20,6 +22,8 @@ const styles = makeStyles({
     ["@media (max-width:780px)"]: {
       flexDirection: "column",
       display: "inline-block",
+      position: "fixed",
+      width: "50%",
       // position: "static",
     },
     textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
@@ -32,64 +36,104 @@ const styles = makeStyles({
     },
   },
   menuItem: {
-    paddingRight: "4px",
+    display: "inline-block",
+    paddingRight: "3px",
     fontSize: "15px",
-    // width: "10px",
     cursor: "pointer",
-    // flexGrow: 1,
-    fontFamily: "Poppins",
+    color: "black",
+    // fontFamily: "Poppins",
     "&hover": {
       color: "#4f25c8",
     },
     ["@media (max-width:780px)"]: {
       paddingBottom: "1rem",
+      flexDiraction: "column",
+      display: "inline-block",
     },
   },
-  Typography:{
-    width:'700px'
-  },
-  CustomBtn: {
-    backgroundColor: "#1a73e8",
-    color: "black",
+  Typography: {
+    width: "700px",
   },
 });
 
-const triggerText = "Masuk";
-  const onSubmit = (event) => {
-    event.preventDefault(event);
-    console.log(event.target.name.value);
-    console.log(event.target.email.value);
-  };
+const triggerText = "MASUK";
+const onSubmit = (event) => {
+  event.preventDefault();
+};
 
-export default function Navbar() {
+const Navbar = (props) => {
+  const authLink = props.loggedIn ? (
+    <Link
+      className={classes.menuItem}
+      onClick={() =>
+        api()
+          .post("/logout")
+          .then((response) => {
+            if (response.status === 204) {
+              props.setLoggedIn(false);
+              sessionStorage.setItem("loggedIn", false);
+            }
+          })
+      }
+      style={{ textDecoration: "none", paddingTop: "1rem" }}
+    >
+      <h5>SIGN OUT</h5>
+    </Link>
+  ) : (
+    <Container triggerText={triggerText} onSubmit={onSubmit} text="DAFTAR" />
+  );
   const classes = styles();
+  // if (!props.loggedIn) {
   return (
     <div>
       <Toolbar id="navbar" position="sticky" className={classes.bar}>
-        <a href="/"><img src={logo} className={classes.logo}/></a>
-        <Typography className={classes.menuItem}>
-          <a style={{ color: "black" }} href="/home">
-            {" "}
-            EXPLORE{" "}
-          </a>
-        </Typography>
-        <Typography className={classes.Typography}> </Typography>
-        <Typography className={classes.menuItem}>
-          <a style={{ color: "black" }} href="#">
-            {" "}
-            CONTACT US{" "}
-          </a>
-        </Typography>
-        {/* <Typography className={classes.menuItem}>
-          <a style={{ color: "black" }} href="#">
-            {" "}
-            MASUK{" "}
-          </a>
-        </Typography> */}
-        <Container triggerText={triggerText} onSubmit={onSubmit} text="DAFTAR" />
+        <a href="/">
+          <img src={logo} className={classes.logo} />
+        </a>
+        <Link
+          className={classes.menuItem}
+          to="/home"
+          style={{ textDecoration: "none", paddingTop: "1rem" }}
+        >
+          <h5>EXPLORE</h5>
+        </Link>
+        <Typography className={classes.Typography} />
+        <a
+          className={classes.menuItem}
+          onClick=""
+          style={{ textDecoration: "none", paddingTop: "1rem" }}
+        >
+          <h5>CONTACT</h5>
+        </a>
+        {authLink}
       </Toolbar>
     </div>
   );
-}
+};
+// return (
+//   <div>
+//     <Toolbar id="navbar" position="sticky" className={classes.bar}>
+//       <a href="/">
+//         <img src={logo} className={classes.logo} />
+//       </a>
+//       <Link
+//         className={classes.menuItem}
+//         to="/home"
+//         style={{ textDecoration: "none", paddingTop: "1rem" }}
+//       >
+//         <h5>EXPLORE</h5>
+//       </Link>
+//       <Typography className={classes.Typography} />
+//       <Link
+//         className={classes.menuItem}
+//         to="#"
+//         style={{ textDecoration: "none", paddingTop: "1rem" }}
+//       >
+//         <h5>CONTACT</h5>
+//       </Link>
+//       <Container triggerText={triggerText} onSubmit={onSubmit} text="DAFTAR" />
+//     </Toolbar>
+//   </div>
+// );
 
-
+export default Navbar;
