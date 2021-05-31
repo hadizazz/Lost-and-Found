@@ -54,13 +54,9 @@ export default class TotalBrg extends Component {
   //     .catch((error) => console.log("parsing failed", error));
   // }
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      items: [],
-    };
-  }
+  state = {
+    items: [],
+  };
 
   // componentDidMount() {
   //   fetch("http://127.0.0.1:8000/api/items/4")
@@ -118,9 +114,9 @@ export default class TotalBrg extends Component {
             <div className={classes.wrapper}>
               <HowToRegIcon
                 className="barangIcon"
-                style={{ margin: "auto" }}
+                style={{ margin: "auto", fontSize: "50px" }}
               ></HowToRegIcon>
-              <h3>{lastId}</h3>
+              <h3>97</h3>
               <h5>Barang yang Dikembalikan</h5>
             </div>
           </div>
@@ -128,18 +124,18 @@ export default class TotalBrg extends Component {
             <StorageIcon
               key="root"
               className="barangIcon"
-              style={{ margin: "auto", fontSize: "large" }}
+              style={{ margin: "auto", fontSize: "50px" }}
             >
               /
             </StorageIcon>
-            <h3>76</h3>
+            <h3>{lastId}</h3>
             <h5>Total Barang yang terkumpul</h5>
           </div>
           <div>
             <div style={{ padding: "20px 100px" }}>
               <SupervisorAccountIcon
                 className="barangIcon"
-                style={{ margin: "auto" }}
+                style={{ margin: "auto", fontSize: "50px" }}
               >
                 /
               </SupervisorAccountIcon>

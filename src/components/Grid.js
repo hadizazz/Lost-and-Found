@@ -1,7 +1,6 @@
 import React from 'react'
 import {Typography} from '@material-ui/core'
 import {makeStyles} from '@material-ui/core/styles'
-import CustomBtn from './CustomBtn'
 import {Link} from "react-router-dom"
 
 const styles = makeStyles({
@@ -23,18 +22,18 @@ const styles = makeStyles({
     btn:{
         display:'inline-block',
         paddingTop:'1rem',
-        backgroundColor:'#1a73e8',
+        backgroundColor:'#e0557c;',
         boxSizing:'border-box',
-        color:'#000000',
+        color:'#F5f5f5',
         borderRadius:'5px',
         alignItems:'center',
         padding:'0 25px',
         transform:'none',
         transition: "background .3s,border-color .3s, color .3s", "&:hover": {
-            backgroundColor: 'transparent',
+            // border: "1px solid #FFC0CB;",
+            backgroundColor: '#FFC0CB',
         },
     }
-
 })
 
 export default function Grid(props) {
@@ -44,7 +43,7 @@ export default function Grid(props) {
         <div className={classes.wrapper}>
             <div className={classes.item}>{icon}</div>
             <Typography className={classes.item} variant="h5"> {title} </Typography>
-            <Link className={classes.btn} to="/Showmemore" style={{textDecoration:'none', color:'#000000'}}>
+            <Link className={classes.btn} to="/Showmemore" style={{textDecoration:'none', color:'black'}}>
                 <h6>Show Me More</h6>
             </Link>
         </div>

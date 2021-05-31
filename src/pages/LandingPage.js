@@ -6,10 +6,10 @@ import TotalBrg from "../components/landingPage/TotalBrg";
 import Footer from "../components/footer/Footer";
 
 
-export default function LandingPage() {
+const landingPage = (props) => {
   return (
     <div>
-      {/* <Navbar /> */}
+      <Navbar {...props}/>
       <div className="body">
         <div className="hero">
           <div className="boxHeading">
@@ -67,3 +67,5 @@ export default function LandingPage() {
     </div>
   );
 }
+
+export default landingPage;

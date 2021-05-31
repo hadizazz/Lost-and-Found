@@ -2,11 +2,13 @@ import React, { Component } from "react";
 import Navbar from "../components/navbar/Navbar";
 import axios from "axios";
 import Footer from "../components/footer/Footer";
+import withAuth from "../services/withAuth";
+// import withAuth from "../services/withAuth";
 
-export default class Homepage extends Component {
+class Homepage extends Component {
   constructor(props) {
     super(props);
-    
+
     this.state = {
       items: [],
     };
@@ -49,9 +51,7 @@ export default class Homepage extends Component {
                       ></img>
                       <p className="judulBarang">{item.judul}</p>
                       {/* <p className="deskripsi">{item.keterangan}</p> */}
-                      <a href={"/home/"+item.id}
-                        className="detailButton"
-                      >
+                      <a href={"/home/" + item.id} className="detailButton">
                         Detail
                       </a>
                     </div>
@@ -65,3 +65,5 @@ export default class Homepage extends Component {
     );
   }
 }
+
+export default Homepage;
